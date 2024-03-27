@@ -16,9 +16,8 @@ print ('valor inteiro:', valor_inteiro)
 print ('Desconto:', Valor_desconto)
 print ('Sub-total:', subtotal)
 
-#outro desafio02
 
-from datetime import datetime
+
 
 
 

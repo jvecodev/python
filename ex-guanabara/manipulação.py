@@ -26,7 +26,12 @@ print(city[:5].upper() == 'SANTO')
 #outro desafio
 
 nome = str(input('Digite seu nome inteiro: ')).strip()
-print ('Seu nome tem Oliveira? {}'.format('oliveira' in nome.lower()))
+print ('Seu nome tem Oliveira? {}'.format('OLIVEIRA' in nome.upper()))
+
+#penultimo
+
+
+
 
 
 

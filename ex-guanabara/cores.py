@@ -1,5 +1,5 @@
 #adicionando cores-1
-
+ 
 print('\033[1;30;36m Olá mundo!!! \033[m')
 
 numero = int(input('digite um valor: '))

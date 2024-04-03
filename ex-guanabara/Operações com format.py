@@ -6,7 +6,7 @@ divisao = valor1/valor2
 div = valor1//valor2
 e = valor1 ** valor2
 
-print ('A soma é {}, o produto é {} e a divisão é {}.'.format(soma, multi, divisao,), end='>>>')
+print ('A soma é {}, o produto é {} e a divisão é {:.2}.'.format(soma, multi, divisao,), end='>>>')
 print ('A dvisao inteira é {} e a potência é {}'.format(div, e))
 
 #outro desafio

@@ -43,6 +43,15 @@ elif idade < 18:
     idade_correta = 18 - idade
     print('Faltam ainda {} anos para o alistamento obrigatório'.format(idade_correta))   
 else:
-    print ('Por favor procure uma junta militar administrativa e pague a taixa.')    
+    print ('Por favor procure uma junta militar administrativa e pague a taixa.') 
+
+#apenas um teste
+
+codigo = int(input('Digite seu cpr por favor: '))
+
+
+print('Ultimos digitos: {}'.format(codigo[len(codigo)-4]))
+
+
 
 

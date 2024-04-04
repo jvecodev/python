@@ -45,12 +45,33 @@ elif idade < 18:
 else:
     print ('Por favor procure uma junta militar administrativa e pague a taixa.') 
 
-#apenas um teste
-
-codigo = int(input('Digite seu cpr por favor: '))
 
 
-print('Ultimos digitos: {}'.format(codigo[len(codigo)-4]))
+
+#outro desafio
+
+peso = float(input('Digite seu peso: '))
+altura = float(input('Digite sua altura: '))
+imc = peso / altura **2
+
+print ('devido seu peso {:.2f} e sua altura {:.2f}'.format(peso, altura))
+print ('Seu imc é: {:.2f}'.format(imc))
+
+if imc <= 18.5:
+    print('Você esta abaixo do peso recomendado')
+
+elif imc >18.5 and imc < 25:
+    print('Peso ideal')
+elif imc > 25 and imc <30:
+    print('Levimente sobrepeso')
+elif imc >30 and imc <40:
+    print('Obesidade')
+
+else:
+    print('Obesidade mórbida')
+
+
+
 
 
 

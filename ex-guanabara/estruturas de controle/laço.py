@@ -34,6 +34,48 @@ for c in range (termo,50,razao):
    print (c,'->',end=' ')
 print ('Acabou')
 
+#numero primos
+
+numero = int(input('Digite um número: '))
+contador = 0
+for c in range(1, numero +1):
+   if numero % c == 0:
+      print ('\033[32m', end='')
+      contador =+1
+   else:
+      print ('\033[31m', end='')
+   print ('{}'.format(c),end='')
+print ('\n\033[mO {} foi divisível {} vezes'.format(numero, contador))
+
+if contador == 2:
+   print('O numero escolhido é PRIMO')
+else:
+   print ('O numero escolhido não é PRIMO')
+
+#Palíndromo
+frase = str(input('Digite uma frase: ')).strip().upper()
+palavras = frase.split()
+junto = ''.join(palavras)
+inverso = ''
+for letra in range(len(junto) -1, -1, -1):
+   inverso += junto[letra]
+print ('\033[1;31mO inverso de {} é {} \033[m'.format(junto, inverso))
+
+if junto == inverso:
+   print('É um palíndromo')
+else:
+   print('Não é um palíndromo')   
+
+
+   
+
+
+
+
+   
+
+
+
    
 
 

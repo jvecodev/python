@@ -15,9 +15,9 @@
 print ('Acabou')''' 
 
 
-numero = int(input('Digite o numero da sua taboada: '))
+'''numero = int(input('Digite o numero da sua taboada: '))
 for c in range ( 1,11,):
-   print('O resultado de {}x{}={}'.format(numero, c, numero * c))
+   print('O resultado de {}x{}={}'.format(numero, c, numero * c))'''
 
 
 
@@ -47,7 +47,7 @@ for c in range(1, numero +1):
    print ('{}'.format(c),end='')
 print ('\n\033[mO {} foi divisível {} vezes'.format(numero, contador))
 
-if contador == 2:
+if contador > 2:
    print('O numero escolhido é PRIMO')
 else:
    print ('O numero escolhido não é PRIMO')
@@ -64,7 +64,13 @@ print ('\033[1;31mO inverso de {} é {} \033[m'.format(junto, inverso))
 if junto == inverso:
    print('É um palíndromo')
 else:
-   print('Não é um palíndromo')   
+   print('Não é um palíndromo')  
+
+# outro desafio
+
+
+
+       
 
 
    

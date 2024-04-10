@@ -7,10 +7,10 @@ print('-'*9)
 #outro desafio, lata de tinta
 
 
-altura = float(input('Digite a altura do cilindro em metros: '))
+'''altura = float(input('Digite a altura do cilindro em metros: '))
 diâmetro = float(input('Digite o diâmetro da base: '))
 raio = diâmetro/2
-area_base_total = 3.14*raio*2
+area_base_total = 3.14*raio**2
 print ('Raio{} e base{}'.format(raio, area_base_total))
 
 area_lateral = 2*3.14*raio*altura
@@ -23,7 +23,22 @@ quantidade_lata = float(15)
 latas_need = (area_base_total + area_lateral)/quantidade_lata
 
 print('A qauntidade de lata necessária é: ',latas_need)
-print ('Valor a pagar será de {:.2f}'.format(preco_tinta*latas_need))
+print ('Valor a pagar será de {:.2f}'.format(preco_tinta*latas_need))'''
+
+print('Vou te ajudar a calcular a quantidade de latas de tinta e o custo para pintar tanques cilindricos.')
+
+altura = float(input('Informe a ALTURA do cilindro em METROS: '))
+raio = float(input('Informe o RAIO do cilindro em METROS: '))
+
+area_base = (3.14 * raio**2)
+area_lateral = 2 * 3.14 * raio * altura
+area_cilindro = area_base + area_lateral
+
+quantidade_litros = area_cilindro / 3
+quantidade_latas = quantidade_litros / 5
+custo = quantidade_latas * 50.00
+
+print(f'O custo será de R${custo}. Será necessário comprar {quantidade_latas:.2f} latas de 5L de tinta, que dará {quantidade_litros}L.')
 
 
 

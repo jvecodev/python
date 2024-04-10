@@ -14,11 +14,11 @@ while contador < 11:
     resultado = numero * contador 
     print('Resultado de {}x{}'.format(resultado, contador ))
     contador = contador +1
-print ('Fim '*2)  
+print ('Fim ')  
 
 # teste de temperatura
 
-contador = 1
+'''contador = 1
 temperatura = float(input("Digite a temperatura = "))
 while temperatura < 0:
     print("Temperatura menor que zero.")
@@ -26,15 +26,15 @@ while temperatura < 0:
     contador +=1
     temperatura = float(input("Digite a temperatura = "))
 print("Temperatura = ", temperatura)
-print('Voce tentou conectar {} '.format(contador))
+print('Voce tentou conectar {} '.format(contador))'''
 
 # soma/ cálculo acumulativo
 contador = 1
 soma = 0
 while contador < 11:
-    soma = soma + contador
+    soma += contador
     print('Resultado =', soma)
-    contador = contador + 1
+    contador =+ 1
 
 print(contador)   
 

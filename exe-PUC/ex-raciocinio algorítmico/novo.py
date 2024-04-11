@@ -11,6 +11,7 @@ import random
 computador = (random.randint(1,100))
 contador = 0
 print('='*10)
+
 while True:
     numero = int(input('Tente adivinhar o numero de 1 a 100: '))
     if numero < computador:
@@ -23,6 +24,7 @@ while True:
         contador =+ 1
     else:
         print('Parabéns!!')
-print ('O desafio acabou' )        
-
+  
+print ('O desafio acabou!!!')
+        
 

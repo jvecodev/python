@@ -12,7 +12,18 @@ elif peso_boxeador >= 76 and peso_boxeador < 88:
     print('Peso Pesado')
 
 else:
-    print('Peso superior ao pesado')   
+    print('Peso superior ao pesado')  
+
+
+
+
+
+           
+        
+
+
+
+
      
 
 

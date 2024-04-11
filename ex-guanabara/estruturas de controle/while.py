@@ -26,8 +26,7 @@ while True:
         contador =+1
     else:
         print ('\nParabéns pelo acerto!!!')
-print ('\nAcertou o resultado em {} tentativas'.format(contador))     
-print ('Fim ')   
+
 
 
     

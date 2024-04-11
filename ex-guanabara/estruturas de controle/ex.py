@@ -1,17 +1,19 @@
-#aluno irresponsável
-contador = 0
-print ('Escreva em seu caderno')
-while contador < 11:
-    print('Eu amo Racícinio Algorítmico')
-    contador +=1
-print ('Você acha que me engana. Não use laços')    
+pergunta2 = 'S'
+pergunta3 = 0
+while pergunta2 == 'S':
+    valor = int(input('Digite um valor: '))
+    pergunta2 = str(input('Quer continuar [S/N]: ')).upper()
+    if pergunta2 != 'S' and pergunta2 != 'N':
+        pergunta3 = str(input('Não compreendo, digite novamente:'))
+        pergunta2 = str(input('Quer continuar [S/N]: ')).upper()
+       
+print('Fim')
 
-# numero secreto from random import randint
+#numero secreto
 import random
 computador = (random.randint(1,100))
 contador = 0
 print('='*10)
-
 while True:
     numero = int(input('Tente adivinhar o numero de 1 a 100: '))
     if numero < computador:
@@ -24,7 +26,4 @@ while True:
         contador =+ 1
     else:
         print('Parabéns!!')
-  
-
-        
-
+          

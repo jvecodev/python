@@ -17,7 +17,6 @@ else:
 
 numero1 = float(input('Digite um valor: '))
 numero2 = float (input('Digite o segundo valor: '))
-
 if numero1 == numero2 :
     print('Os numeros são equivalentes')
 elif numero1 != numero2 and numero1 > numero2:

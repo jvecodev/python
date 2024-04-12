@@ -82,6 +82,19 @@ while opcao != 5:
 print ('Tente sempre que desejar!!')
 print ('='*9)
 
+#PA
+print ('== Resolvendo uma PA ==')
+
+numero = int(input('Digite um número para calcularmos uma Progressão: '))
+razao = int(input('Qual será a razão? '))
+termo = numero
+contador = 1
+while contador <= 10:
+    print ('{} →'.format(termo), end=" ")
+    termo += razao
+    contador +=1
+print ('FIM')
+
 
 
 

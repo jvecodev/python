@@ -34,11 +34,7 @@ print ('Acabou')'''
 #    calc = calc * fatorial
 # print('{}!={}'.format(fatorial, calc))
 
-numero = int(input('Digite um numero: '))
-for c in range (5,1,-1):
-   resultado = numero * c
-   c = c -1
-print('{}!= {}'.format(numero,resultado))   
+ 
   
 
    

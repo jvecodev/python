@@ -113,6 +113,9 @@ while True:
                         elif opcao_usuario == '3':
                             print("=-"*25)
                             print('\nVoltando à pagina inicial.')
+                            menu = False
+                            menu_usuario = False 
+
 
                         #Erro na escolha de opções    
                         else:
@@ -173,10 +176,11 @@ while True:
                             print ('=-'*25) 
 
                         #Serviço efetuado       
-                        elif opcao_adm == 3:
+                        elif opcao_adm == '3':
                             print ('Retornando ao menu administrativo')
                             adicional = False 
                             menu_administrador = False
+                            menu = False 
                 # Erro ao digitar a senha             
                 else:
                     contador +=1

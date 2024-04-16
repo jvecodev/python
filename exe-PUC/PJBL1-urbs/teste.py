@@ -31,7 +31,7 @@ while True:
         #senha digitada
         while menu_usuario:
             chave = input('Digite a chave fornecida: ').strip()
-            while contador <=3:
+            while contador <= 3:
                 if chave == '121212':
 
                     # Entrada permitida
@@ -194,11 +194,12 @@ while True:
     #FIM         
     elif opcao == '3':
         print('\n<SISTEMA ENCERRADO>') 
-        print('======== Volte sempre ========')
+        print('\n======== Volte sempre ========')
 
     #Erro em digitar opções no menu inicial    
     else:
-        print('Para prosseguir, apenas opções acimas! ')                     
+        print('Para prosseguir, apenas opções acimas! ') 
+       
 
 
 

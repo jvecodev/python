@@ -14,7 +14,7 @@
    print(count,end=' ')
 print ('Acabou')''' 
 
-# numero = int(input('Digite o numero da sua taboada: '))
+# numero = int(input('Digite o numero da sua tabuada: '))
 # for ca in range (1,11,1):
 #    print('O resultado de {}x{}={}'.format(numero, ca, numero * ca ))
 # print('Obrigado')   

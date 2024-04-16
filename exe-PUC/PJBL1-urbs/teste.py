@@ -95,7 +95,7 @@ while True:
                                             print('Conta com senha: ***',senha_cartao)
                                             saldo += float(valor_recarga)
                                             print('\nRecarregado com sucesso, saldo atual de ',saldo)
-                                            adicional= False
+                                            adicional = False
 
                                         #Senha alfanumérica negada    
                                         else:
@@ -142,7 +142,7 @@ while True:
         # Cadastro
         while menu_administrador:
             chave = input('Digite a chave fornecida: ').strip()
-            while contador <=3:
+            while contador <= 3:
                 if chave == '212121':
 
                     # Entrada permitida

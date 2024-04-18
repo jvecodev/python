@@ -1,3 +1,5 @@
+import time
+
 saldo = 0
 valor_passagem = float(6.00)
 contador = 0
@@ -15,7 +17,7 @@ while True:
     
     #abertura
     print('========= Bem-Vindo a Nexus =========')
-    print('[1] Usuário')
+    print('\n[1] Usuário')
     print('[2] Administrador')
     print('[3] Sair')
     print ('=-'*25)
@@ -26,6 +28,7 @@ while True:
         nome = str(input('\nDigite seu nome: '))
         print('=-'*30)
         print ('Bem vindo {}, esta é a sua chave de usuário: 121212'.format(nome))
+        time.sleep(.4)
         print('=-'*30) 
 
         #senha digitada
@@ -36,6 +39,7 @@ while True:
 
                     # Entrada permitida
                     print('\n=== SERVIÇO AO USUÁRIO ===')
+                    time.sleep(.4)
                     contador = 0
                     while menu:
                         adicional = True 
@@ -79,6 +83,7 @@ while True:
                                     print('[1] Crédito')
                                     print('[2] Débito')
                                     formato = input('\nQual a forma de pagamento: ')
+                                    time.sleep(.4)
 
                                     if formato:
                                         if formato == '1':
@@ -87,6 +92,7 @@ while True:
                                             print('Conta com senha: ***',senha_cartao)
                                             saldo += float(valor_recarga)
                                             print('\nRecarregado com sucesso, saldo atual de ',saldo)
+                                            time.sleep(.4)
                                             adicional = False
 
                                         elif formato == '2':
@@ -95,6 +101,7 @@ while True:
                                             print('Conta com senha: ***',senha_cartao)
                                             saldo += float(valor_recarga)
                                             print('\nRecarregado com sucesso, saldo atual de ',saldo)
+                                            time.sleep(.4)
                                             adicional = False
 
                                         #Senha alfanumérica negada    
@@ -113,6 +120,7 @@ while True:
                         elif opcao_usuario == '3':
                             print("=-"*25)
                             print('\nVoltando à pagina inicial.')
+                            time.sleep(.4)
                             menu = False
                             menu_usuario = False 
 
@@ -147,6 +155,7 @@ while True:
 
                     # Entrada permitida
                     print('===== SERVIÇO AO ADMINISTRADOR =====')
+                    time.sleep(.4)
                     contador = 0
                     while menu:
                         adicional = True
@@ -157,6 +166,7 @@ while True:
                         print('[3] Sair')
                         print('=-'*30)
                         opcao_adm = input('Digite sua opção: ').strip()
+                        time.sleep(.4)
 
                         #ALteração de valor
                         if opcao_adm == '1':
@@ -178,6 +188,7 @@ while True:
                         #Serviço efetuado       
                         elif opcao_adm == '3':
                             print ('Retornando ao menu administrativo')
+                            time.sleep(.4)
                             adicional = False 
                             menu_administrador = False
                             menu = False 
@@ -195,6 +206,7 @@ while True:
     elif opcao == '3':
         print('\n<SISTEMA ENCERRADO>') 
         print('\n======== Volte sempre ========')
+        time.sleep(.3)
 
     #Erro em digitar opções no menu inicial    
     else:

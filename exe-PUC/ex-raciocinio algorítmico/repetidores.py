@@ -8,13 +8,13 @@ while contador <10:
 
 contador = 0
 resultado = 0
-numero = int(input('Digite o numero da sua taboada: '))
+numero = int(input('Digite um valor para a sua tabuada: '))
+while contador < 10:
+    contador += 1
+    resultado = contador * numero
+    print(f'Valor de {numero}x{contador}={resultado}')
+print('fim')
 
-while contador < 11:
-    resultado = numero * contador 
-    print('Resultado de {}x{}'.format(resultado, contador ))
-    contador = contador +1
-print ('Fim ')  
 
 # teste de temperatura
 
@@ -29,14 +29,7 @@ print("Temperatura = ", temperatura)
 print('Voce tentou conectar {} '.format(contador))'''
 
 # soma/ cálculo acumulativo
-contador = 1
-soma = 0
-while contador < 11:
-    soma += contador
-    print('Resultado =', soma)
-    contador =+ 1
 
-print(contador)   
 
 #desafio 02
 '''contador = 1

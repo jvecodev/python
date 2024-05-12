@@ -57,53 +57,58 @@ for i in range(len(lista)):  #essa lista esta escrita na realidade para não apa
 #         print('Notas maiores que a media: ', listas[i])
    
 
-#exercícios
+# exercícios
 
-# vetor =[]
+
 
 
 # vetor = []
 # for i in range(10):
 #     valor = int(input("Digite o valor para a posição {}: ".format(i)))
 #     vetor.append(valor)
-
 # elemento_procurado = int(input("Digite o elemento que deseja procurar: "))
-
-# if vetor[i] == elemento_procurado:
-#     print("O elemento foi encontrado")
+# if vetor.count(elemento_procurado) == 0:
+#     print('Não está no vetor')
 # else:
-#         print("O elemento não está no vetor.")
+#    print("Dado encontrado na posição: ", vetor.index(elemento_procurado))
+
+
 
 #MEGASENA
 
-# from random import randint
+from random import randint
 
-# numeros_sorteio = []
-# for _ in range(6):
-#     numero = randint(1, 60)
-#     numeros_sorteio.append(numero)
+numeros_sorteio = []
+for _ in range(6):
+    numero = randint(1, 60)
+    numeros_sorteio.append(numero)
 
-# print("\nInsira os números da sua aposta:")
-# numeros_aposta = []
-# for i in range(6):
-#     numero = int(input(f"Número {i+1}: "))
-#     numeros_aposta.append(numero)
+print("\nInsira os números da sua aposta:")
+numeros_aposta = []
+for i in range(6):
+    numero = int(input(f"Número {i+1}: "))
+    numeros_aposta.append(numero)
 
-# print(numeros_sorteio)
-# print(numeros_aposta)
-# if numeros_aposta == numeros_sorteio:
-#     print('Parabéns, você é o novo milionário')
-# else:
-#     print('Que pena, continue tentando')
-# #apenas uma encher linguiça 
-# numeros_em_comum = set(numeros_sorteio) & set(numeros_aposta)
-# print("\nNúmeros em comum:")
-# print(numeros_em_comum)
+print(numeros_sorteio)
+print(numeros_aposta)
+if numeros_aposta == numeros_sorteio:
+    print('Parabéns, você é o novo milionário')
+else:
+    print('Que pena, continue tentando')
+contador = 0
+
+for c in range(len(numeros_sorteio)):
+     if numeros_aposta == numeros_sorteio:
+            contador +=1
+print('Valores em comum: ', contador)
+
+
 
 produtos = []
 preco = []
 quantidade = []
-valorfinal = []
+faturamento =[]
+
 print('=========Mercado Power G=========')
 while True:
     #Definindo produto
@@ -120,12 +125,16 @@ while True:
     
     opcao = str(input('Inserir mais? [S/N]').upper())
     if opcao in 'N':
+        
         break
-faturamento_total = sum(valorfinal)
+faturamento = 0
+for i in range (len(produtos)):
+    faturamento = faturamento + preco[i] * quantidade[i]
+
 for i in range(len(produtos)):
     print(f'Produto: {produtos[i]}, Preço: R${preco[i]:.2f}, Quantidade: {quantidade[i]}')
+print(faturamento)
 
-print(f'Faturamento total: R${faturamento_total:.2f}')
 
 
 

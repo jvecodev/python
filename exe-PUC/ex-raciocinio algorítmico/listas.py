@@ -1,8 +1,6 @@
-lista = []
-lista.append(10)
-lista.append(20)
-for i in range(len(lista)):  #essa lista esta escrita na realidade para não aparecer os colchetes 
-    print(lista[i])
+
+
+
 
 
 # lista = [[], [],]
@@ -135,6 +133,7 @@ for i in range(len(produtos)):
     print(f'Produto: {produtos[i]}, Preço: R${preco[i]:.2f}, Quantidade: {quantidade[i]}')
 print(faturamento)
 
+#gera captcha aleatório com números e letras uzando a biblioteca random
 
 
 

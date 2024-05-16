@@ -49,24 +49,26 @@
 # numeros[1].sort()
 # print(f'Os valores ímpares são {numeros[1]}')
 
-# #matrizes 
-# print('='*30)
-# matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-# soma = maior = 0
+#matrizes 
+print('='*30)
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+soma = maior = 0
 
-# for l in range (0,3):
-#     for c in range (0,3):
-#         matriz[l] [c]= float(input(f'Digite um valor para {l}, {c}:  '))
-# print('='*30)
-# for l in range(0,3):
-#     for c in range (0,3):
-#         print(f'[{matriz [l][c]:^5}]',end=' ')
-#         if matriz[l] [c] %2 ==0:
-#             soma += matriz [l] [c]
-#         if l == 0 and c == 0:
-#             matriz[l] [c] = maior
-#         if matriz [l] [c] > maior:
-#             maior = matriz [l] [c]
+for l in range (0,3):
+    for c in range (0,3):
+        matriz[l] [c]= float(input(f'Digite um valor para {l}, {c}:  '))
+print('='*30)
+for l in range(0,3):
+    for c in range (0,3):
+        print(f'[{matriz [l][c]:^5}]',end=' ')
+        if matriz[l] [c] %2 ==0:
+            soma += matriz [l] [c]
+        if l == 0 and c == 0:
+            matriz[l] [c] = maior
+        if matriz [l] [c] > maior:
+            maior = matriz [l] [c]
+    print()
+print(f'Este {maior} foi o maior numero digitado')
             
             
 #     print()
@@ -105,7 +107,7 @@
         
 
 from time import sleep
-print ('=======Lista compostas=======')
+print ('\n=======Lista compostas=======')
 ficha = list()
 while True:
     nome = str(input('Digite o nome do aluno: '))

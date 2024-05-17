@@ -1,5 +1,5 @@
-digito = input('Digite qualquer texto: ')
-print(digito)
+digito = input('Digite qualquer texto: ').lower()
+
 contadorvogal = 0
 contadorspace = 0
 for indice in range(len(digito)):
@@ -7,8 +7,8 @@ for indice in range(len(digito)):
         contadorvogal +=1
     if digito[indice] == ' ':
         contadorspace += 1
-print('Vogais: ', contadorvogal / 2)
-print('Espaços: ', contadorspace / 2 )
+print('Vogais: ', contadorvogal)
+print('Espaços: ', contadorspace )
 
 
 

@@ -37,4 +37,22 @@ print('=-'*20)
 #         captcha = gerar_captcha()
 #         print("Novo Captcha:", captcha)
 
+# Terceiro desafio/ N-gramas
+print('=-'*20)
+lista = []
+digito = str(input('Digite qualquer texto: ').lower())
+while True:
+    print(len(digito))
+    lista.append(digito)
+    if len(digito) < 3:
+        print('Texto muito curto, digite novamente!')
+        digito = str(input('Digite qualquer texto: ').lower())
+    else:
+        print(len(digito)/2)
+        
+        break
+print('=-'*20)
+
+
+
 

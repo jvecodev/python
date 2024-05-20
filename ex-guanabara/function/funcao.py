@@ -73,7 +73,7 @@ def somaPar(lista):
 numeros = list()
 sorteia(numeros)
 somaPar(numeros)
-
+# help(input) > #help é uma função que mostra a documentação de uma função
 
     
     

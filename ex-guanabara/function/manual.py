@@ -22,8 +22,10 @@ while True:
     ajuda= str(input('Função ou Biblioteca → '))
     titulo (f'Acessando {ajuda}  com o programa HelPython → ',4)
     help(ajuda)
-    opcao = str(input('Deseja continuar? FIM para sair:'))
+    opcao = str(input('\033[0;30;41mDeseja continuar? FIM para sair: \033[m'))
     if opcao.upper() == 'FIM': 
         break
 titulo('Fim programa',1)
 titulo('Volte sempre!',1)
+
+

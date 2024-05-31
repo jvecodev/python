@@ -12,16 +12,16 @@
 # print('Litro: ',litro)
 # print ('Latas necessárias: ',quantidade_lata)
 
-# #horario
-# hora_inicial = int(input('Digite a hora inicial: '))
-# minuto_inicial = int(input('Digite o minuto inicial: '))
-# hora_final = int(input('Digite a hora final: '))
-# minuto_final = int(input('Digite o minuto final: '))
+#horario
+hora_inicial = int(input('Digite a hora inicial: '))
+minuto_inicial = int(input('Digite o minuto inicial: '))
+hora_final = int(input('Digite a hora final: '))
+minuto_final = int(input('Digite o minuto final: '))
 
-# hora_trancorrida = (hora_final - hora_inicial) *60
-# minuto_transcorrido = minuto_final - minuto_inicial
-# minutos_total = hora_trancorrida + minuto_transcorrido
-# print('Tempo gasto: ', minutos_total)
+hora_trancorrida = (hora_final - hora_inicial) *60
+minuto_transcorrido = minuto_final - minuto_inicial
+minutos_total = hora_trancorrida + minuto_transcorrido
+print('Tempo gasto: ', minutos_total)
 
 #imposto de renda
 

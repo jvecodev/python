@@ -29,6 +29,7 @@
 # carro1.acelerar()
 # carro1.frear()
 # carro1.destino()
+
 cores = [
     '\033[0;30;41m', # 0 - Vermelho
     '\033[0;30;42m', # 1 - Verde

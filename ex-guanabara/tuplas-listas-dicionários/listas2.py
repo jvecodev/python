@@ -36,18 +36,18 @@
 
 # #pares e impares
 
-# numeros = [[], []]
+numeros = [[], []]
 
-# for count in range (7):
-#     dados = int(input(f'Digite o {count} valor: '))
-#     if dados % 2 == 0:
-#         numeros [0].append(dados)
-#     else:
-#         numeros [1].append(dados)
-# numeros[0].sort()
-# print(f'Os valores pares são {numeros[0]}')
-# numeros[1].sort()
-# print(f'Os valores ímpares são {numeros[1]}')
+for count in range (7):
+    dados = int(input(f'Digite o {count} valor: '))
+    if dados % 2 == 0:
+        numeros [0].append(dados)
+    else:
+        numeros [1].append(dados)
+numeros[0].sort()
+print(f'Os valores pares são {numeros[0]}')
+numeros[1].sort()
+print(f'Os valores ímpares são {numeros[1]}')
 
 #matrizes 
 print('='*30)

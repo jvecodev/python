@@ -31,3 +31,5 @@ finally:
             print(f'\033[30;41mO erro encontrado foi {erro}.\033[m')
         else:
             break
+
+

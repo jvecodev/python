@@ -1,6 +1,5 @@
 import random
 import random
-
 captcha = ""
 for _ in range(6):
         captcha += random.choice("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")

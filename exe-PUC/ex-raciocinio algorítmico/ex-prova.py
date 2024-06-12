@@ -13,15 +13,14 @@
 # print ('Latas necessárias: ',quantidade_lata)
 
 #horario
-hora_inicial = int(input('Digite a hora inicial: '))
-minuto_inicial = int(input('Digite o minuto inicial: '))
-hora_final = int(input('Digite a hora final: '))
-minuto_final = int(input('Digite o minuto final: '))
-
-hora_trancorrida = (hora_final - hora_inicial) *60
-minuto_transcorrido = minuto_final - minuto_inicial
-minutos_total = hora_trancorrida + minuto_transcorrido
-print('Tempo gasto: ', minutos_total)
+# hora_inicial = int(input('Digite a hora inicial: '))
+# minuto_inicial = int(input('Digite o minuto inicial: '))
+# hora_final = int(input('Digite a hora final: '))
+# minuto_final = int(input('Digite o minuto final: '))
+# hora_trancorrida = (hora_final - hora_inicial) *60
+# minuto_transcorrido = minuto_final - minuto_inicial
+# minutos_total = hora_trancorrida + minuto_transcorrido
+# print('Tempo gasto: ', minutos_total)
 
 #imposto de renda
 
@@ -53,13 +52,20 @@ print('Tempo gasto: ', minutos_total)
 # else:
 #     print('Escaleno')   
 
-#acumulador
-# soma = 0 
-# contador = 1
-# while contador < 11:
-#     contador +=1   
-#     soma += contador
-#     print(f'A soma = {soma}') 
+#fibonacci
+soma = 0 
+contador = 3
+t1= 0
+t2 = 1
+print(f'{t1}  →  {t2}', end='  ') 
+while contador < 11:
+    t3 = t1 + t2
+    print(f'→  {t3}', end='  ') 
+    t1 = t2
+    t2 = t3
+    contador +=1   
+print('Fim')
+    
 
 
 # numero_secreto = 42  

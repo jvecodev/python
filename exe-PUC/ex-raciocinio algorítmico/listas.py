@@ -10,8 +10,8 @@
 #         lista[0].append(dados)
 #     else:
 #         lista[1].append(dados)
-# print(lista[0])
-# print(lista[1])
+# print('Números Pares: ',lista[0])
+# print('Números Ímpares: ',lista[1])
 # print('='*20)
 
 # lista = [4, 5, 6]
@@ -23,19 +23,19 @@
 # for i in range(len(lista)):
 #     print(lista[i])
 
-# frutas = ['laranja', 'maça', 'pera', 'banana', 'kiwi', 'maça',
-# 'banana']
-# print(frutas.count('maça'))
-# print(frutas.count('tangerina'))
-# print(frutas.index('banana'))
-# print(frutas.index('banana',4))
-# frutas.reverse()
-# print(frutas)
-# frutas.append('uva')
-# print(frutas)
-# frutas.sort()
-# print(frutas)
-# print(frutas.pop())
+frutas = ['laranja', 'maça', 'pera', 'banana', 'kiwi', 'maça',
+'banana']
+print(frutas.count('maça'))
+print(frutas.count('tangerina'))
+print(frutas.index('banana'))
+print(frutas.index('banana',4))
+frutas.reverse()
+print(frutas)
+frutas.append('uva')
+print(frutas)
+frutas.sort()
+print(frutas)
+print(frutas.pop())
 
 # listas = []
 # soma = 0

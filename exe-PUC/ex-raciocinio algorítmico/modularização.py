@@ -1,22 +1,27 @@
-# def verificando_valor (num, max, min):
-#     if num > max and num < min:
+
+
+
+
+
+def verificando_valor (num, max, min):
+    if num < max and num > min:
         
-#         return True
-#     else:
-#         return False
+        return True
+    else:
+        return False
     
     
 
 
-# maximo = int(input("Digite o valor máximo: "))
-# minimo = int(input("Digite o valor mínimo: "))
-# valor = int(input("Digite um valor: "))
+maximo = int(input("Digite o valor máximo: "))
+minimo = int(input("Digite o valor mínimo: "))
+valor = int(input("Digite um valor: "))
 
-# resultado = verificando_valor(valor, maximo, minimo)
-# if resultado == True:
-#     print("O valor está dentro do intervalo")
-# else:
-#     print("O valor está fora do intervalo")
+resultado = verificando_valor(valor, maximo, minimo)
+if resultado == True:
+    print("O valor está dentro do intervalo")
+else:
+    print("O valor está fora do intervalo")
 
 # def somar(a, b):
 #     soma = a + b
@@ -66,29 +71,7 @@
 # escolha = int(input('Escolha um número de opção: '))
 # chamar = escolherOperacao(valor1, valor2, escolha)
 
-# def fatorial (num):
-#     fat = 1
-#     for i in range(num, 0, -1):
-#         fat *= i
-#         if i == num:
-#             print(f'{i}', end=' x ') 
-#         else:
-#             print(f'{i}', end=' = ')
-#     return fat
-# numero = int(input('Digite um número: '))
-# (fatorial(numero))
 
-# def fatorial (num):
-#     fat = 1
-#     for i in range(num, 0, -1):
-#         if i > 1:
-#             print (f'{i} ', end='x ')
-#         else :
-#             print(f'{i} ', end='= ')
-#         fat *= i    
-#     return fat
-# numero = int(input('Digite um número: '))
-# print(fatorial(numero))
 
 # def maior (*num):
 #     print('Analisando os valores... ')
@@ -108,12 +91,13 @@
 #     print(f'Você digitou {contador} números e o maior valor foi {maior}')
 # maior()
 
-print()
+# print()
 def criptografando(texto):
     texto = texto.lower()
-    cripto_texto = ""
+    cripto_texto = ''
     
     for letra in texto:
+        
         if letra == 'a':
             cripto_texto += 'd'
         if letra == 'e':
@@ -124,24 +108,39 @@ def criptografando(texto):
             cripto_texto += 'r'
         if letra == 'u':
             cripto_texto += 't'
-        else:
-            cripto_texto += letra
-
+            
     return cripto_texto
 
-    
-    # if 'a' in texto:
-    #     texto = texto.replace('a', 'd')
-    # if 'e' in texto:
-    #     texto = texto.replace('e', 'h')
-    # if 'i' in texto:
-    #     texto = texto.replace('i', 'l')
-    # if 'o' in texto:
-    #     texto = texto.replace('o', 'r')
-    # if 'u' in texto:
-    #     texto = texto.replace('u', 't')
-    
-    # return texto
 frase = input('Digite uma frase: ')
 print(criptografando(frase))
+
+
+#25
+
+
+def fatorial (num):
+    fat = 1
+    for i in range(num, 0, -1):
+        if i > 1:
+            print (f'{i} ', end='x ')
+        else :
+            print(f'{i} ', end='= ')
+        fat *= i    
+    return fat
+numero = int(input('Digite um número: '))
+print(fatorial(numero))
+
+# Recursividade necessitam sempre ter um (if) de travamento, no caso de falta, o computador trava, ocorrendo um erro 
+
+print('='*30)
+
+def fatorial(numero):
+    if numero > 0:
+        return numero * fatorial(numero - 1)
+    return 1
+
+numero = int(input('Digite um número: '))
+resultado = fatorial(numero)
+print(f'O fatorial de {numero} é {resultado}')
+
 

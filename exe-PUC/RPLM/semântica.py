@@ -1,4 +1,10 @@
 import ttg as t
+# exer a)
+# p = caminhar q = reprovar r = Jogar futebol s = correr
+resultado = t.Truths(['p', 'q', 'r', 's'], ['(p => ~q) and (~r => s) and (q => s)'],  ints=False )
+print(resultado)
+print(resultado.valuation())
+
 #p = atraso do professor q= aula começa na hora certa r = atraso aluno
 resultado = t.Truths(['p', 'q', 'r'], ['(~p => q) and (~r and ~p )=> q'],  ints=False )
 
@@ -24,6 +30,15 @@ print(resultado.valuation())
 resultado = t.Truths(['p', 'q', 'r', 's', 't', 'u'], ['(p  and q and r) and ((q and p) => (s or ~t or u )) and (~s and ~v and ~u) => ~t'],  ints=False )
 
 print(resultado.valuation())
+
+resultado = t.Truths(['p', 'q'], ['p => p or q '],  ints=False )
+
+print(resultado.valuation())
+
+resultado = t.Truths(['p', 'q', 'r'], ['(p or q) and (p =>r) and (~r) => q '],  ints=False )
+print(resultado)
+print(resultado.valuation())
+
 
 
 

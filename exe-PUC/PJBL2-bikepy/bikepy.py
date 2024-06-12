@@ -4,15 +4,18 @@
 PreçoPerHora = 5
 usuario = [0] * 3
 dia = []
+registro_data = []
+registro_hora = []
 
 
 
-def titulo(texto):
+
+def inserir_titulo(texto):
     
-    print('='*40)
-    print(f'  {texto:^35}')
-    print('='*40)
-titulo('BikePY → Aluguel de bicicletas') 
+    print('='*50)
+    print(f'  \033[30;42m{texto:^45}\033[m')
+    print('='*50)
+inserir_titulo('BikePY → Aluguel de bicicletas') 
 
 # Função para cadastro de usuário
 def cadastro(nome, email, senha):
@@ -20,23 +23,24 @@ def cadastro(nome, email, senha):
     usuario[2] = email
     usuario[1] = senha
     if usuario[0] == '' or usuario[1] == '' or usuario[2] == '':
-        print('Preencha todos os campos')
+        print('\033[31mPreencha todos os campos\033[m')
         cadastro(input('Digite seu nome: '), input('Digite seu email: '), input('Digite sua senha: '))
-        print('Cadastro realizado com sucesso')
+        inserir_titulo(f'Bem vind@ {usuario[0]} ao BikePY!')
     else:
-        titulo(f'Bem vind@ {usuario[0]} ao BikePY!')
-        titulo('Faça seu login')
+        inserir_titulo(f'Bem vind@ {usuario[0]} ao BikePY!')
+        print('\033[30;44mFaça seu login\033[m'.center(50))
+        print('=========================================')
     return usuario
 
 def validar_nome2 (nome):
     while nome == '':
-        print('Nome inválido, digite um nome válido')
+        print('\033[31mNome inválido, digite um nome válido\033[m')
         nome = input('Digite seu nome: ')
     
 
 def validar_nome (nome):
     while nome.isnumeric():
-        print('Nome inválido, digite um nome válido')
+        print('\033[31mNome inválido, digite um nome válido\033[m')
         nome = input('Digite seu nome: ')
     return nome
 
@@ -52,12 +56,13 @@ cadastro(nome, email, senha)
 def login(emailLogin, senhaLogin):
     while True:
         if emailLogin == usuario[2] and senhaLogin == usuario[1]:
-            print('Login realizado com sucesso!')
+            print()
+            print('\033[30;44Login realizado com sucesso!\033[m'.center(60))
             break 
         
         elif emailLogin != usuario[2] or senhaLogin != usuario[1] :
 
-            print('Email ou senha incorretos tente novamente')
+            print('\033[31mEmail ou senha incorretos tente novamente\033[m')
             emailLogin = input('Digite seu email: ')
             senhaLogin = input('Digite sua senha: ')
               
@@ -69,7 +74,7 @@ login(email_login, senha_login)
 def validar_crédito(saldo_inicial):
     while True:
         if saldo_inicial < 5:
-            print('Saldo insuficiente para alugar bicicleta')
+            print('\033[31mSaldo insuficiente para alugar bicicleta\033[m')
             print()
             saldo_inicial = float(input('Digite novamente um valor que deseja adicionar a sua conta: '))
             print('==================================================')
@@ -78,15 +83,15 @@ def validar_crédito(saldo_inicial):
             print('Créditos adicionados com sucesso!')
             print('Seu saldo atual é de R$', saldo_inicial)
             break
-    return saldo_inicial
+    return True
 
 
-titulo('Créditos inciais obrigatórios')
+inserir_titulo('\033[30;42mCréditos inciais obrigatórios\033[m')
 print('Preço por hora: R$5,00')
-saldo = float(input('Digite o valor que deseja adicionar a sua conta: '))
+saldo = float(input('Digite o valor: '))
 validar_crédito(saldo)
 
-login(email_login, senha_login)
+
 
 def menu(lista_opx):
     print()
@@ -107,11 +112,19 @@ def perguntar_data():
         mes = int(input("Digite o Mês Atual [MM]: "))
         
         if dia > 31 or mes > 12 :
-            print("ERRO!!! DIA/MÊS INFORMADO INVÁLIDO!!!")
+            print("\033[31mERRO!!! DIA/MÊS INFORMADO INVÁLIDO!!!\033[m")
             return perguntar_data()	
     lista.append(dia)
     lista.append(mes)
     return lista
+
+def visualizar_historico(dia, hora):
+    for data in range(len(dia)):
+        print('Data:', dia[data][0], '-', dia[data][1]) 
+        print('Horário:', hora[data][0], '-', hora[data][1])
+        print('=========================================')
+    return menu(lista_opcao)
+    
 
 def perguntar_horario():
     hora = -1
@@ -122,7 +135,7 @@ def perguntar_horario():
         hora = int(input("Digite as Horas Atuais [DD]: "))       
         minuto = int(input("Digite os Minutos Atuais [MM]: "))
         if  hora > 24 or minuto > 60 or hora < 0 or minuto < 0:
-            print("ERRO!!! HORA:MINUTOS INFORMADO INVÁLIDO!!!")
+            print("\033[31mERRO!!! HORA:MINUTOS INFORMADO INVÁLIDO!!!\033[m")
             return perguntar_horario()
     lista.append(hora)
     lista.append(minuto)
@@ -146,34 +159,25 @@ def calcular_tempo_em_minutos():
     print('Saldo atual: R$', saldo - custo_total)
     return saldo - custo_total
 
-
-
-
-
-
-
-
-
-
 while True:
-    titulo("Menu de opções:")
+    inserir_titulo('Menu de opções:')
     lista_opcao = ['Alugar Bicicleta', 'Recarregar créditos ', 'Visualizar Histórico', 'Redefinir minha senha', 'Encerrar Programa']
     opcao = menu(lista_opcao)
     
     if opcao == 1:
-        if saldo < 5:
-            print('Saldo insuficiente para alugar bicicleta')
-            print('Recarregue sua conta para alugar bicicleta')
+        if saldo <= 5:
+            print('\033[31mSaldo insuficiente para alugar bicicleta\033[m')
+            print('\033[31mRecarregue sua conta para alugar bicicleta\033[m')
             print('==================================================')
         else:
             
-            print('Aluguel de bicicleta')
-            print('=============== AVISOS IMPORTANTES ===============')
+            inserir_titulo('Aluguel de bicicleta')
+            print('\033[31m=============== AVISOS IMPORTANTES ===============\033[m')
             print('1 - O aluguel de bicicletas é cobrado por hora')
             print('2 - Necessário ter créditos em sua conta')
             print('3 - O valor do aluguel é de R$5,00 por hora')
             print('==================================================')
-            print('Digite a data ')
+            print('Digite a data '.center(50))
             print('==================================================')
             data_inicio = perguntar_data()
             print('==================================================')
@@ -186,10 +190,15 @@ while True:
             print('Digite o horário do fim do aluguel')
             print('==================================================')
             horario_fim = perguntar_horario()
-            titulo('Aluguel de bicicleta realizado com sucesso!')
-            print('==================================================')
-            print('Data e horário de início do aluguel: ', data_inicio, horario_inicio)
-            print('Data e horário de fim do aluguel: ', data_fim, horario_fim)
+            inserir_titulo('Aluguel de bicicleta realizado com sucesso!')
+            data = [0] * 2
+            data [0] = str(data_inicio[0]) + '/' + str(data_inicio[1] )
+            data [1] = str(data_fim[0]) + '/' + str(data_fim[1])
+            registro_data.append(data)
+            horario= [0] * 2
+            horario [0] = str(horario_inicio[0]) +	':' + str(horario_inicio[1])
+            horario[1] = str(horario_fim[0]) + ':' + str(horario_fim[1])
+            registro_hora.append(horario)
             print('==================================================')
             print('Calculando o tempo total do aluguel...')
             saldo = calcular_tempo_em_minutos()
@@ -198,22 +207,30 @@ while True:
     
    
 
-    if opcao == 2:
+    elif opcao == 2:
+        inserir_titulo('Recarga de créditos')
         valor_recarga = float(input('Digite o valor que deseja adicionar a sua conta: '))
         saldo += valor_recarga
         print('Créditos adicionados com sucesso!')
         print('Seu saldo atual é de R$', saldo)
 
     elif opcao == 3:
-        print('Seu saldo atual é de R$', saldo)
-
+        inserir_titulo('Histórico de alugueis')
+        if len(registro_data) == 0:
+            print('Nenhum aluguel realizado até o momento')
+        else:
+            visualizar_historico(registro_data, registro_hora)
+        
     elif opcao == 4:
+        inserir_titulo('Redefinir senha')
         nova_senha = input('Digite sua nova senha: ')
         usuario[1] = nova_senha
         print('Senha redefinida com sucesso!')
 
+
     elif opcao == 5:
         print('Encerrando o programa...')
+        print('Obrigado por usar o BikePY!')
         break
 
     else:

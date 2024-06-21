@@ -1,4 +1,7 @@
-
+# Trabalho desenvolvido por:
+# Eduardo Henrique Fabri
+# João Vitor Correa Oliveira
+# Roberto Zhou
 
 #   Criando listas para armazenar informações
 usuario = [0] * 3
@@ -36,7 +39,7 @@ def criar_conta(login, senha, creditos):
     usuario[2] = creditos
     print('Usuário cadastrado(a) com sucesso.')
 
-#   segurir_dica_senha:
+#   sugerir_dica_senha:
 #       entrada: login do usuário(a) cadastrado(a)
 #       saída: dica de senha do usuário(a) cadastrado(a)
 def sugerir_dica_senha(login):
@@ -59,18 +62,17 @@ def visualizar_registro(dia, horario):
 
 #   perguntar_data:
 #       entrada: não recebe nenhum parâmetro de entrada
-#       saída: retorna uma lista com a data e mês
+#       saída: retorna uma lista com a data, mês e ano
 def perguntar_data():
-    dia = 0
-    mes = 0
-    ano = 0
+    dia = int(input('Digite o dia atual [DD]: '))
+    mes = int(input('Digite o mês atual [MM]: '))
+    ano = int(input('Digite o mês atual [YYYY]: '))
     lista = []
     while dia <= 0  or mes <= 0 or ano <= 0:
+        print('Dia, mês ou ano informado inválido.')
         dia = int(input('Digite o dia atual [DD]: '))
         mes = int(input('Digite o mês atual [MM]: '))
-        ano = 2024
-        if dia <= 0  or mes <= 0 or ano <= 0:
-            print('Dia, mês ou ano informado inválido.')
+        ano = int(input('Digite o ano atual [YYYY]: '))
     lista.append(dia)
     lista.append(mes)
     lista.append(ano)
@@ -80,14 +82,13 @@ def perguntar_data():
 #       entrada: não recebe nenhum parâmetro de entrada
 #       saída: retorna uma lista com as horas e minutos
 def perguntar_horario():
-    hora = -1
-    minuto = -1
     lista = []
+    hora = int(input('Digite as horas atuais [HH]: '))
+    minuto = int(input('Digite os minutos Atuais [MM]: '))
     while hora < 0 or minuto < 0:
+        print('Hora ou minuto informado invalido')
         hora = int(input('Digite as horas atuais [HH]: '))
         minuto = int(input('Digite os minutos Atuais [MM]: '))
-        if hora < 0 or minuto < 0:
-            print('Hora ou minuto informado invalido')
     lista.append(hora)
     lista.append(minuto)
     return lista
@@ -99,11 +100,11 @@ def converter_data_em_minutos(dia, mes, ano):
     #   Info:
     #       1 dia = 24h
     #       1 hora = 60 min
-    #       1 ano = 12 messes
+    #       1 ano = 12 mees
     #       1 mês = 30 dias
     #   1. (Transforma DIA em horas e horas em minutos)
     #   2. (Transforma MÊS em dias, dias em horas e horas em minutos)
-    #   3. (Transforma ANO em messes, messes em dias, dias em horas e horas em minutos)
+    #   3. (Transforma ANO em meses, meses em dias, dias em horas e horas em minutos)
     #   4. E soma tudo dando a data em minutos.
     calculo = (dia * 24 * 60) + (mes * 30 * 24 * 60) + (ano * 12 * 30 * 24 * 60)
     return calculo                                        
@@ -129,12 +130,11 @@ def transformar_lista_string(lista):
 inserir_titulo('Cadastro | Bikepy')
 login = str(input('Login: '))
 senha = str(input('Senha: '))
-creditos = -1
+creditos = float(input('Digite a quantidade de créditos que gostaria de depositar: R$'))
 while creditos < 0:
+    print('Valor informado inválido.')
+    print('Tente novamente.')
     creditos = float(input('Digite a quantidade de créditos que gostaria de depositar: R$'))
-    if creditos < 0:
-        print('Valor informado inválido.')
-        print('Tente novamente.')
 conta = criar_conta(login, senha, creditos)
 
 opcao = 0
@@ -244,16 +244,15 @@ while opcao != 3: # Porque 3? Porque a opção 3 é a opção de encerrar o prog
                 #   Sistema de deposito de crédito
                 elif opcao == 3:
                     inserir_titulo('Recarregar Créditos | Bikepy')
-                    creditos = -1
+                    creditos = float(input('Digite a quantidade de créditos que gostaria de depositar: R$'))
                     while creditos < 0:
+                        print('Valor informado inválido.')
+                        print('Tente novamente.')
                         creditos = float(input('Digite a quantidade de créditos que gostaria de depositar: R$'))
-                        if creditos < 0:
-                            print('Valor informado inválido.')
-                            print('Tente novamente.')
                     usuario[2] = usuario[2] + creditos
                     print('Crédito atual: R$', usuario[2])
                     print('Preço do serviço [1 HORA]: R$', preco_hora)
-                elif opcao == 4:
+                elif opcao == 5:
                     print('Encerrando sessão.')
                 else:
                     print('Opção inválida. Tente novamente.')
@@ -267,5 +266,4 @@ while opcao != 3: # Porque 3? Porque a opção 3 é a opção de encerrar o prog
     elif opcao == 3:
         print('Encerrando programa.')
     else:
-        print('Opção inválida. Tente novamente.')
-
+        print('Opção inválida. Tente novamente.')

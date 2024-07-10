@@ -34,24 +34,10 @@ print(variavel[0:4:1])  # Retorna a string do primeiro ao quarto caractere pulan
 
 print(variavel[::-1])  # Inverte a string
 
-numero = input('Digite um número: ')
-if numero is float:
-    print('apenas números inteiros são aceitos')
-else:
-    print('O número digitado foi: ', numero)
+
 
 # Trocar ponto por vírgula
 
-numero = 2.5
-if '.' in str(numero):
-    numero = str(numero).replace('.', ',')
-print(numero)
-
-# Parsear string para int
-# Mudar seu tipo primitivo de dado
-numero = '10'
-numero = int(numero)
-print(numero)
 
 # metodos da STR
 
@@ -69,6 +55,32 @@ print(numero)
 # in → Verifica se uma string está contida em outra
 # is → Verifica se a string é de um tipo específico
 
-string = 'joao'
-print(string.zfill(10))  # Adiciona zeros a esquerda	
-print(string.encode())  # Codifica a string
+# string = 'joao'
+# print(string.zfill(10))  # Adiciona zeros a esquerda	
+# print(string.encode())  # Codifica a string
+
+# listaSoma = [1,2,3,4,5,5,6,7,8,9,10]
+# print(f'Somando elementos da lista → {sum(listaSoma)}')  # Soma todos os elementos da lista
+
+
+# Metodos uteis 
+# Dicionarios
+# clear() → Limpa o dicionário
+# copy() → Copia o dicionário
+# fromkeys() → Retorna um dicionário com as chaves e valores especificados
+# get() → Retorna o valor de uma chave específica
+# items() → Retorna uma lista com uma tupla para cada par chave-valor
+# keys() → Retorna uma lista com as chaves do dicionário
+# pop() → Remove um item do dicionário
+# popitem() → Remove o último item inserido no dicionário
+# setdefault() → Retorna o valor de uma chave específica. Se a chave não existir, insere a chave com o valor especificado
+# update() → Atualiza o dicionário com novos pares chave-valor
+
+# Muda os valores do dicionaro
+dicionario = {'a': 1, 'b': 2, 'c': 3}
+print(dicionario)
+dicionario.update(a = 10, b = 20, c = 30)
+dicionario.update([('a', 100), ('b', 200), ('c', 300)]) # desta forma tabem será possivel 
+print(dicionario)
+
+

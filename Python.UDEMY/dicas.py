@@ -63,4 +63,8 @@
 # print(f'Somando elementos da lista → {sum(listaSoma)}')  # Soma todos os elementos da lista
 
 
+# import sys
+# sys.getsizeof() → Retorna o tamanho em bytes de um objeto e quanto de memoria ele está ocupando
+
+
 

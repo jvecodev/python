@@ -1,6 +1,15 @@
-# Essa biblioteca é usada para interagir com o sistema operacional. Ela fornece acesso a algumas variáveis e funções que interagem com o ambiente do sistema operacional.
+#Essa biblioteca é usada para interagir com o sistema operacional. Ela fornece acesso a algumas variáveis e funções que interagem com o ambiente do sistema operacional.
 
-# import sys
+import sys
+
+
+print(f'Sistema Operacional: {sys.platform} ')
+
+
+
+
+
+
 # try:
 #     1 / 0
 # except ZeroDivisionError:
@@ -19,7 +28,7 @@
 # import sys
 # sys.stdout.write("Escrevendo na saída padrão\n")
 
-# Exercicios simples
+# #Exercicios simples
 
 # def multiplicar(*args):
 #     resultado = 1
@@ -33,17 +42,17 @@
 # print(resposta)
 
 
-# Utilizando High order 
-def criar_multiplicador(multiplicador):
-    def multiplicar(numero):
-        numero *= multiplicador
-        return numero
-    return multiplicar
+# # Utilizando High order 
+# def criar_multiplicador(multiplicador):
+#     def multiplicar(numero):
+#         numero *= multiplicador
+#         return numero
+#     return multiplicar
 
-dobro = criar_multiplicador(2)
-triplo = criar_multiplicador(3)
-print(dobro( 2 ))
-print(triplo(2))
+# dobro = criar_multiplicador(2)
+# triplo = criar_multiplicador(3)
+# print(dobro( 2 ))
+# print(triplo(2))
 
 
 

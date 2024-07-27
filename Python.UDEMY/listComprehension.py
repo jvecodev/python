@@ -28,15 +28,16 @@ produtos = [
 ]
 def valores(produto):
     if produto['preco'] >= 50:
-        print()
-        print('Produtos caros: ', produto['nome'])
-        print()
-    return produto['nome']
+        
+        return produto['nome']
+    
+    else:
+        return 'Produto barato'
 
 novo_produto = [
     valores(produto)
     for produto in produtos
 ]
 
-print(*novo_produto, sep=' - ')
+print('Produtos caros',*novo_produto, sep=' - ')
 

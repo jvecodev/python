@@ -1,53 +1,64 @@
+import random
+
 # Jogo da forca
 
-# palavra correta ('python')
-# import random
+def escolher_palavra():
+    palavras = ["python", "programacao", "computador", "tecnologia", "desenvolvimento"]
+    return random.choice(palavras)
 
-# def escolher_palavra():
-#     palavras = ["python", "programacao", "computador", "tecnologia", "desenvolvimento"]
-#     return random.choice(palavras)
+def exibir_estado(palavra, letras_corretas):
+    estado = ""
+    for letra in palavra:
+        if letra in letras_corretas:
+            estado += letra
+        else:
+            estado += "_"
+    return " ".join(estado)
 
-# def exibir_estado(palavra, letras_corretas):
-#     estado = ""
-#     for letra in palavra:
-#         if letra in letras_corretas:
-#             estado += letra + " "
-#         else:
-#             estado += "_ "
-#     return estado
+def exibir_caminho_certos(palavra, letras_corretas):
+    if len(letras_corretas) > len(palavra) / 2:
 
-# def jogar_forca():
-#     palavra_secreta = escolher_palavra()
-#     letras_corretas = set()
-#     tentativas = 6
-#     letras_erradas = set()
+        return f"Você está indo bem!, esta no caminho certo para adivinhar a palavra"
+    else:
+        print("")
+    
 
-#     print("Bem-vindo ao jogo da forca!")
-#     print("Você tem", tentativas, "tentativas para adivinhar a palavra.")
+def jogar_forca():
+    palavra_secreta = escolher_palavra()
+    letras_corretas = set()
+    tentativas = 6
+    letras_erradas = set()
 
-#     while tentativas > 0:
-#         print("\nPalavra:", exibir_estado(palavra_secreta, letras_corretas))
-#         print("Letras erradas:", " ".join(letras_erradas))
-#         chute = input("Digite uma letra: ").lower()
+    print("Bem-vindo ao jogo da forca!")
+    print("Você tem", tentativas, "tentativas para adivinhar a palavra.")
 
-#         if chute in letras_corretas or chute in letras_erradas:
-#             print("Você já tentou essa letra.")
-#             continue
+    while tentativas > 0:
+        print("\nPalavra:", exibir_estado(palavra_secreta, letras_corretas))
+        print("Letras erradas:", " ".join(letras_erradas))
+        chute = input("Digite uma letra: ").lower()
 
-#         if chute in palavra_secreta:
-#             letras_corretas.add(chute)
-#             if all(letra in letras_corretas for letra in palavra_secreta):
-#                 print("Parabéns! Você adivinhou a palavra:", palavra_secreta)
-#                 break
-#         else:
-#             letras_erradas.add(chute)
-#             tentativas -= 1
-#             print("Letra incorreta. Você tem", tentativas, "tentativas restantes.")
+        if chute in letras_corretas or chute in letras_erradas:
+            print("Você já tentou essa letra.")
+            continue
 
-#         if tentativas == 0:
-#             print("Você perdeu! A palavra era:", palavra_secreta)
+        if chute in palavra_secreta:
+            letras_corretas.add(chute)
+            print(exibir_caminho_certos(palavra_secreta, letras_corretas))
 
-# jogar_forca()
+            if all(letra in letras_corretas for letra in palavra_secreta):
+                print("Parabéns! Você adivinhou a palavra:", palavra_secreta)
+                break
+        else:
+            letras_erradas.add(chute)
+            tentativas -= 1
+            print("Letra incorreta. Você tem", tentativas, "tentativas restantes.")
+
+        if tentativas == 0:
+            print("Você perdeu! A palavra era:", palavra_secreta)
+
+jogar_forca()
+
+
 
 
 # Checagem de numeros duplicados

@@ -1,3 +1,5 @@
+
+
 # Exemplo de CPF: '123.456.789-09'
 cpf = input('Digite o CPF: ')
 # Remove os caracteres não numéricos do CPF
@@ -38,3 +40,4 @@ else:
             print("CPF válido")
         else:
             print("CPF inválido")
+

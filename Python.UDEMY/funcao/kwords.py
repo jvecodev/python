@@ -1,4 +1,5 @@
-# kwargs = keyword arguments = Argumentos nomeados
+# kwargs = keyword arguments = Argumentos nomeados, Preciso de de dois * para representar um dicionario
+# args = argumentos não nomeados, Preciso de um * para representar uma tupla
 # Juntamente utilizados com dicionarios para passar argumentos nomeados
 
 import os

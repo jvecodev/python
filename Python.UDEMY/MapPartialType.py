@@ -12,6 +12,7 @@ produtos = [
 ]
 
 
+# No map, eu posso passar uma função e uma lista, e ele irá aplicar a função em cada item da lista
 
 def aumetarPorcentagem(valor, porcentagem):
     return round (valor * porcentagem, 2)

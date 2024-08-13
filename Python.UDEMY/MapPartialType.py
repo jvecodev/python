@@ -11,8 +11,7 @@ produtos = [
     {'nome': 'p10', 'preco': 60},
 ]
 
-
-
+#apenas um teste 
 def aumetarPorcentagem(valor, porcentagem):
     return round (valor * porcentagem, 2)
 #round é uma funcão que arredonda numeros, o primeiro valor é o tal numero e o segundo valor são as casas decimais                                    

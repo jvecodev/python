@@ -6,3 +6,4 @@
 # Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass  -> comando para permitir a execução de scripts no powershell
 # .\venv\Scripts\activate -> comando para ativar o ambiente virtual no powershell
 # pip unistall nome_da_biblioteca -> comando para desinstalar uma biblioteca
+

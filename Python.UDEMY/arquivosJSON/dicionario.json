@@ -1,0 +1,12 @@
+{
+    "nome": "Otávio",
+    "sobrenome": "Silva",
+    "idade": 30,
+    "cidade": "São Paulo",
+    "Endereço": [
+        {
+            "rua": "Av. Paulista",
+            "numero": 1000
+        }
+    ]
+}

@@ -66,6 +66,6 @@ if __name__ == "__main__":
 
 
 
-with open ("todo_list.json", "w") as arquivo:
+with open ("C:\\Users\\jccol\\OneDrive\\estudos\\python\\Python.UDEMY\\todo-list\\todo_list.json", "w") as arquivo:
     
-    json.dump(todo_list, arquivo, indent=4)	
+    json.dump(todo_list, arquivo, indent=4, ensure_ascii=False)	

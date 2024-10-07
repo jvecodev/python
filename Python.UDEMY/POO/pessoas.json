@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Luiz",
+        "idade": 32,
+        "ano_nascimento": 1992
+    },
+    {
+        "nome": "Jo\u00e3o",
+        "idade": 43,
+        "ano_nascimento": 1981
+    },
+    {
+        "nome": "Maria",
+        "idade": 30,
+        "ano_nascimento": 1994
+    }
+]

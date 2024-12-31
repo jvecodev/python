@@ -17,7 +17,7 @@ dicionario = {
     "cidade": "São Paulo",
     "Endereço":[
         {
-            "rua": "Av. Paulista",
+            "rua": "Av. Carioca",
             "numero": 1000
         }
 
